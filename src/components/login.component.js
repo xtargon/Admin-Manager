@@ -41,7 +41,7 @@ export default class Login extends Component {
       pass: this.state.pass
     };
 
-    axios.post('https://bakend-yessybot.herokuapp.com:4000/students/admin', adminObject)
+    axios.post('https://bakend-yessybot.herokuapp.com/students/admin', adminObject)
       .then(res =>  this.setState({logged: res.data.id, nameUser:res.data.name, token: res.data.volatilToken}));
 
     this.setState({
